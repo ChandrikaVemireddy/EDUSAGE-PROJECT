@@ -1,249 +1,390 @@
-EduSage --- Admission & Enrollment Portal
+# 🎓 EduSage — Admission & Enrollment Portal
 
-A full-stack admissions operations workspace for applicant review,
-application tracking, decisions, events, and enrollment analytics.
+> **A modern admissions operations workspace that brings applicant review, application tracking, decisions, events, and enrollment analytics together in one place.**
 
-Project Overview
+---
 
-EduSage is a demonstration admission and enrollment portal built as a
-full-stack web application. It brings applicant information, application
-status, document checklist progress, review decisions, audit activity,
-events, and analytics into one workspace.
+## ✨ What is EduSage?
 
-The current implementation focuses on a demonstrable end-to-end
-admissions workflow:
+**EduSage** is a full-stack admission and enrollment portal designed to make the admissions journey easier to understand and manage.
 
-Dashboard → Applicant Directory → Applicant 360° → Checklist →
-AI-assisted review signal → Human Decision → Audit Timeline → Analytics
-/ Events
+Instead of spreading applicant information, documents, decisions, activities, and analytics across different places, EduSage brings them together into a single workspace.
 
-Key Features
+### 🚀 The journey at a glance
 
-Admissions Dashboard
+**📊 Dashboard → 👥 Applicants → 🧾 Applicant 360° → ✅ Checklist → 🤖 Review Signal → 👤 Human Decision → 📝 Audit Timeline → 📈 Analytics**
 
-Applicant totals
+The result is a clear, structured workflow from **application review to admission decision**.
 
-Submitted applications
+---
 
-Applications under review
+## 🌟 Key Features
 
-Admitted applicants
+### 📊 Admissions Dashboard
 
-Application pipeline
+Get an instant overview of the current admissions cycle.
 
-Action queue
+* 👥 Total applicants
+* 📩 Submitted applications
+* 🔍 Applications under review
+* 🎓 Admitted applicants
+* 📈 Application pipeline
+* ⚡ Action queue
+* 🕒 Recent applicant activity
 
-Recent applicant activity
+---
 
-Applicant Directory
+### 👥 Applicant Directory
 
-Searchable applicant records
+A centralized workspace for discovering and reviewing applicants.
 
-Program, source, score, checklist, and status information
+* 🔎 Searchable applicant records
+* 🎓 Program information
+* 📣 Applicant source
+* 📊 Application score
+* 📋 Checklist progress
+* 🏷️ Application status
+* ➡️ Direct access to applicant details
 
-Applicant detail navigation
+---
 
-Applicant 360°
+### 🧑‍💻 Applicant 360°
 
-Applicant profile
+A complete view of an applicant's application journey.
 
-Application number and fee status
+View:
 
-Academic/application score information
+* 👤 Applicant profile
+* 🆔 Application number
+* 💳 Fee status
+* 📚 Academic/application score
+* 📑 Document checklist
+* 🕒 Activity history
+* 📝 Audit timeline
 
-Document checklist
+Everything needed for a review is brought together in one place.
 
-Activity and audit timeline
+---
 
-Review & Decisions
+### 🤖 Review & Decisions
 
-Reviewer workflow
+EduSage combines automated assistance with a human-controlled decision workflow.
 
-AI-assisted review signal
+**Review → Assess → Decide → Record**
 
-Human decision actions
+Features include:
 
-Admit / Deny / Waitlist / Review status handling
+* 🤖 AI-assisted review signal
+* 👤 Human reviewer workflow
+* ✅ Admit
+* ❌ Deny
+* ⏳ Waitlist
+* 🔍 Review
+* 📝 Decision audit event
 
-Decision audit event
+> **Important:** The AI-assisted signal supports the review process; the final admission action is explicitly made through the reviewer workflow.
 
-Events
+---
 
-Admissions event information
+### 📅 Events
 
-Registration/capacity information
+Keep track of admissions-related events and participation information.
 
-Analytics
+* 📅 Event information
+* 👥 Registration details
+* 🎯 Capacity information
 
-Status distribution
+---
 
-Program distribution
+### 📈 Analytics
 
-Applicant source information
+Turn application data into an easy-to-understand overview.
 
-Monthly application/admission trend
+Explore:
 
-Technology Stack
+* 📊 Status distribution
+* 🎓 Program distribution
+* 📣 Applicant sources
+* 📅 Monthly application trends
+* 🎯 Admission trends
 
-Layer      Technology
+---
 
-Frontend   React + Vite
-UI Icons   Lucide React
-Backend    Python + FastAPI
-Database   SQLite
-ORM        SQLAlchemy
-API        REST
+# 🛠️ Technology Stack
 
-Project Structure
+| Layer        | Technology           |
+| ------------ | -------------------- |
+| 🎨 Frontend  | **React + Vite**     |
+| ✨ UI Icons   | **Lucide React**     |
+| ⚙️ Backend   | **Python + FastAPI** |
+| 🗄️ Database | **SQLite**           |
+| 🔗 ORM       | **SQLAlchemy**       |
+| 🌐 API       | **REST**             |
 
+---
+
+# 🗂️ Project Structure
+
+```text
 EduSage_Assessment_Final/
-├── README.md
-├── backend/
+│
+├── 📄 README.md
+│
+├── ⚙️ backend/
 │   ├── database.py
 │   ├── edusage.db
 │   ├── main.py
 │   ├── models.py
 │   ├── requirements.txt
 │   └── seed.py
-└── frontend/
+│
+└── 🎨 frontend/
     ├── index.html
     ├── package.json
     └── src/
         ├── main.jsx
         └── style.css
+```
 
-Running the Project Locally
+---
 
-1. Start the Backend
+# 🚀 Run EduSage Locally
 
+## 1️⃣ Start the Backend
+
+Open a terminal:
+
+```bash
 cd backend
+```
 
+Create a virtual environment:
+
+```bash
 python -m venv venv
+```
 
-Windows:
+### Windows
 
+```bash
 venv\Scripts\activate
+```
 
-macOS/Linux:
+### macOS / Linux
 
+```bash
 source venv/bin/activate
+```
 
-Install dependencies:
+Install the backend dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
 Seed the demonstration database:
 
+```bash
 python seed.py
+```
 
 Start FastAPI:
 
+```bash
 uvicorn main:app --reload --port 8000
+```
 
-Backend:
+### ⚙️ Backend
 
+```text
 http://localhost:8000
+```
 
-API documentation:
+### 📚 API Documentation
 
+```text
 http://localhost:8000/docs
+```
 
-2. Start the Frontend
+---
 
-Open a second terminal:
+## 2️⃣ Start the Frontend
 
+Open a **second terminal**:
+
+```bash
 cd frontend
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
+```
 
-Frontend:
+### 🎨 Frontend
 
+```text
 http://localhost:5173
+```
 
-Demonstration Flow
+---
 
-The recommended demo flow is:
+# 🎬 Demonstration Flow
 
-Open the Overview dashboard.
+Want to understand EduSage quickly?
 
-Review the admissions pipeline and action queue.
+Follow this workflow:
 
-Open Applicants.
+```text
+📊 Overview
+     ↓
+👥 Applicants
+     ↓
+🧑 Applicant 360°
+     ↓
+📋 Checklist
+     ↓
+🤖 AI-Assisted Review Signal
+     ↓
+👤 Human Decision
+     ↓
+📝 Audit Activity
+     ↓
+📅 Events
+     ↓
+📈 Analytics
+```
 
-Select an applicant to open the Applicant 360° view.
+### Suggested demo walkthrough
 
-Review checklist completion and application information.
+1. 📊 Open the **Overview** dashboard.
+2. 📈 Review the admissions pipeline and action queue.
+3. 👥 Open **Applicants**.
+4. 🧑 Select an applicant.
+5. 📋 Review application information and checklist progress.
+6. 🤖 Examine the AI-assisted review signal.
+7. 👤 Submit a human admission decision.
+8. 📝 Observe the updated status and audit activity.
+9. 📅 Explore **Events**.
+10. 📈 Finish with **Analytics**.
 
-Review the AI-assisted signal.
+---
 
-Submit a human admission decision.
+# 🔌 API Endpoints
 
-Observe the updated status and audit activity.
+The FastAPI backend exposes the following endpoints:
 
-Open Events.
+| Method | Endpoint                                  | Purpose             |
+| ------ | ----------------------------------------- | ------------------- |
+| `GET`  | `/api/health`                             | Health check        |
+| `GET`  | `/api/dashboard`                          | Dashboard data      |
+| `GET`  | `/api/applicants`                         | Applicant directory |
+| `GET`  | `/api/applicants/{applicant_id}`          | Applicant details   |
+| `POST` | `/api/applicants/{applicant_id}/decision` | Submit decision     |
+| `GET`  | `/api/events`                             | Admissions events   |
+| `GET`  | `/api/analytics`                          | Analytics data      |
 
-Open Analytics to review application trends and distributions.
+Interactive API documentation:
 
-API Endpoints
-
-The FastAPI backend currently exposes:
-
-GET  /api/health
-GET  /api/dashboard
-GET  /api/applicants
-GET  /api/applicants/{applicant_id}
-POST /api/applicants/{applicant_id}/decision
-GET  /api/events
-GET  /api/analytics
-
-FastAPI's interactive API documentation is available at:
-
+```text
 http://localhost:8000/docs
+```
 
-Important Design Principle
+---
 
-EduSage separates automated assistance from the final admission action.
-The application provides an AI-assisted review signal, while the actual
-decision is explicitly made through the reviewer workflow and recorded
-in the audit timeline.
+# 🧠 Design Principle
 
-Current Scope
+EduSage is designed around a simple principle:
 
-This repository is an assessment/MVP implementation focused on the
-strongest demonstrable admissions workflow.
+> **Automation can assist the review process, but the final admission action remains a human decision.**
 
-The architecture can be extended for future integrations such as:
+The application provides an **AI-assisted review signal**, while the actual decision is explicitly made through the reviewer workflow and recorded in the audit timeline.
 
-Student Information Systems (SIS)
+This keeps the workflow transparent and makes the decision process easier to follow.
 
-Transcript providers
+---
 
-Payment systems
+# 📦 Current Scope
 
-Communication services
+EduSage is currently presented as a **functional assessment/MVP demonstration** focused on the core admissions workflow.
 
-Additional identity/authentication providers
+The architecture can be extended in future iterations with integrations such as:
 
-Production-grade deployment infrastructure
+* 🏫 Student Information Systems (SIS)
+* 📚 Transcript providers
+* 💳 Payment systems
+* 💬 Communication services
+* 🔐 Additional identity/authentication providers
+* ☁️ Production-grade deployment infrastructure
 
-Demo Simulation
+---
 
-A separate visual simulation is provided alongside this repository to
-demonstrate the intended user journey without requiring a viewer to
-install the application first.
+# 🎥 Demo Simulation
 
-Recommended file: EduSage_Simulation.mp4
+A separate visual simulation is provided alongside the source project.
 
-Project Status
+The simulation demonstrates the main EduSage journey without requiring viewers to install the application first.
 
-Status: Functional assessment/MVP demonstration
+### 🎬 Simulation
 
-Primary workflow: Applicant review and admission decision
+**`EduSage_Simulation.mp4`**
 
-Database: Seeded SQLite demonstration data
+The video demonstrates:
 
-Built for demonstration and evaluation
+**Dashboard → Applicants → Applicant 360° → Review → Decision → Analytics**
 
-EduSage is designed to make the admissions workflow easier to understand
-by bringing applicant operations, review, decisions, events, and
-analytics into one interface.
+> The simulation video is intentionally kept **separate from the project ZIP**.
+
+---
+
+# 📌 Project Status
+
+| Area                  | Status          |
+| --------------------- | --------------- |
+| 🎨 Frontend           | ✅ Functional    |
+| ⚙️ Backend            | ✅ Functional    |
+| 🗄️ Database          | ✅ Seeded SQLite |
+| 👥 Applicant workflow | ✅ Implemented   |
+| 🤖 Review signal      | ✅ Demonstrated  |
+| 👤 Decision workflow  | ✅ Implemented   |
+| 📝 Audit activity     | ✅ Demonstrated  |
+| 📅 Events             | ✅ Implemented   |
+| 📈 Analytics          | ✅ Demonstrated  |
+| 🎬 Simulation         | ✅ Provided      |
+
+### 🏁 Status
+
+**Functional Assessment / MVP Demonstration**
+
+**Primary Workflow:** Applicant Review & Admission Decision
+
+**Database:** Seeded SQLite Demonstration Data
+
+---
+
+# 💡 Why EduSage?
+
+EduSage brings the important parts of the admissions workflow into **one clear operational workspace**.
+
+Instead of viewing admissions as disconnected steps, the platform connects:
+
+**Applicants + Applications + Documents + Review + Decisions + Events + Analytics**
+
+into a single journey.
+
+---
+
+## 🎓 EduSage
+
+### *From application to decision — one connected admissions workspace.*
+
+---
+
+**Built for demonstration, evaluation, and future expansion.**
